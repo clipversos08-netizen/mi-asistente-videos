@@ -4,6 +4,7 @@ export const MyComposition = () => {
     const title = videoData.title;
 const subtitle = videoData.subtitle;
 const description = videoData.description;
+const category = videoData.category;
   const frame = useCurrentFrame();
 
   const opacity = interpolate(
@@ -99,9 +100,19 @@ const description = videoData.description;
             marginBottom: 25,
           }}
         >
-          PRESENTA
+          {videoData.hook}
         </div>
-
+<div
+  style={{
+    fontSize: 24,
+    letterSpacing: 5,
+    fontWeight: 600,
+    opacity: 0.7,
+    marginTop: 15,
+  }}
+>
+  {category}
+</div>
         <div
           style={{
             fontSize: 92,
@@ -132,6 +143,29 @@ const description = videoData.description;
         >
           {description}
         </div>
+
+    <div    
+  style={{
+    fontSize: 30,
+    opacity: 0.85,
+    marginTop: 30,
+    maxWidth: 850,
+    lineHeight: 1.4,
+  }}
+>
+  {videoData.script}
+  <div
+  style={{
+    fontSize: 32,
+    fontWeight: 700,
+    marginTop: 35,
+    opacity: 0.95,
+  }}
+      >
+
+  {videoData.callToAction}
+</div>
+</div>
       </div>
 
       {/* Barra inferior */}
