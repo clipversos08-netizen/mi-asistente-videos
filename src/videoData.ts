@@ -1,4 +1,5 @@
 export const videoData = {
+      topic: "Inteligencia artificial para crear videos",
   title: "MI ASISTENTE",
   subtitle: "CREA VIDEOS CON IA",
   description: "Tu contenido. Tu estilo. Automático.",
