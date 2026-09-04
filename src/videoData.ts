@@ -4,4 +4,9 @@ export const videoData = {
   description: "Tu contenido. Tu estilo. Automático.",
   author: "Mi Asistente",
   category: "Marketing",
+  platforms: {
+    tiktok: true,
+    instagram: true,
+    youtube: true,
+  },
 };
