@@ -1,6 +1,9 @@
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
 export const MyComposition = () => {
+    const title = "MI ASISTENTE";
+  const subtitle = "CREA VIDEOS CON IA";
+  const description = "Tu contenido. Tu estilo. Automático.";
   const frame = useCurrentFrame();
 
   const opacity = interpolate(
@@ -107,7 +110,7 @@ export const MyComposition = () => {
             marginBottom: 25,
           }}
         >
-          MI ASISTENTE
+          {title}
         </div>
 
         <div
@@ -118,7 +121,7 @@ export const MyComposition = () => {
             marginBottom: 20,
           }}
         >
-          CREA VIDEOS CON IA
+          {subtitle}
         </div>
 
         <div
@@ -127,7 +130,7 @@ export const MyComposition = () => {
             opacity: 0.7,
           }}
         >
-          Tu contenido. Tu estilo. Automático.
+          {description}
         </div>
       </div>
 
