@@ -1,14 +1,13 @@
-import React from "react";
-import { AbsoluteFill, useCurrentFrame, interpolate } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 
-export const MyComposition: React.FC = () => {
+export const MyComposition = () => {
   const frame = useCurrentFrame();
 
   const opacity = interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
 
-  const scale = interpolate(frame, [0, 30], [0.8, 1], {
+  const scale = interpolate(frame, [0, 30], [0.85, 1], {
     extrapolateRight: "clamp",
   });
 
@@ -16,26 +15,26 @@ export const MyComposition: React.FC = () => {
     <AbsoluteFill
       style={{
         background:
-          "linear-gradient(135deg, #111827 0%, #4f46e5 50%, #9333ea 100%)",
+          "linear-gradient(160deg, #17104f 0%, #4b2bd9 55%, #8b35e8 100%)",
         justifyContent: "center",
         alignItems: "center",
         fontFamily: "Arial, sans-serif",
+        color: "white",
       }}
     >
       <div
         style={{
+          textAlign: "center",
           opacity,
           transform: `scale(${scale})`,
-          textAlign: "center",
-          padding: 50,
+          padding: 60,
         }}
       >
         <div
           style={{
-            color: "white",
-            fontSize: 90,
-            fontWeight: "bold",
-            marginBottom: 30,
+            fontSize: 78,
+            fontWeight: 800,
+            letterSpacing: 2,
           }}
         >
           MI ASISTENTE
@@ -43,9 +42,9 @@ export const MyComposition: React.FC = () => {
 
         <div
           style={{
-            color: "white",
-            fontSize: 48,
-            fontWeight: "bold",
+            fontSize: 42,
+            fontWeight: 700,
+            marginTop: 25,
           }}
         >
           CREA VIDEOS CON IA
@@ -53,9 +52,9 @@ export const MyComposition: React.FC = () => {
 
         <div
           style={{
-            color: "rgba(255,255,255,0.8)",
-            fontSize: 30,
-            marginTop: 40,
+            fontSize: 26,
+            marginTop: 35,
+            opacity: 0.85,
           }}
         >
           Tu contenido. Tu estilo. Automático.
