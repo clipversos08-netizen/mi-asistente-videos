@@ -1,9 +1,10 @@
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { videoData } from "./videoData";
+import { aiContent } from "./aiContent";
 export const MyComposition = () => {
-    const title = videoData.title;
-const subtitle = videoData.subtitle;
-const description = videoData.description;
+  
+
+
 const category = videoData.category;
   const frame = useCurrentFrame();
 
@@ -100,7 +101,7 @@ const category = videoData.category;
             marginBottom: 25,
           }}
         >
-          {videoData.hook}
+          {aiContent.hook}
         </div>
 <div
   style={{
@@ -121,7 +122,7 @@ const category = videoData.category;
             marginBottom: 25,
           }}
         >
-          {title}
+          {aiContent.title}
         </div>
 
         <div
@@ -132,7 +133,7 @@ const category = videoData.category;
             marginBottom: 20,
           }}
         >
-          {subtitle}
+          {aiContent.subtitle}
         </div>
 
         <div
@@ -141,7 +142,7 @@ const category = videoData.category;
             opacity: 0.7,
           }}
         >
-          {description}
+          {aiContent.description}
         </div>
 
     <div    
@@ -153,7 +154,7 @@ const category = videoData.category;
     lineHeight: 1.4,
   }}
 >
-  {videoData.script}
+  {aiContent.script}
   <div
   style={{
     fontSize: 32,
@@ -163,7 +164,7 @@ const category = videoData.category;
   }}
       >
 
-  {videoData.callToAction}
+  {aiContent.callToAction}
 </div>
 </div>
       </div>
