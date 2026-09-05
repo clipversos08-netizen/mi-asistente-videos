@@ -1,0 +1,1 @@
+export const topic = "5 herramientas de inteligencia artificial";

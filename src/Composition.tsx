@@ -1,7 +1,9 @@
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+﻿import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { videoData } from "./videoData";
-import { aiContent } from "./aiContent";
+import { generateContent } from "./ai/generateContent";
+import { topic } from "./ai/topic";
 export const MyComposition = () => {
+const aiContent = generateContent(topic);
   
 
 
@@ -60,7 +62,7 @@ const category = videoData.category;
         overflow: "hidden",
       }}
     >
-      {/* Círculo decorativo */}
+      {/* C├¡rculo decorativo */}
       <div
         style={{
           position: "absolute",
@@ -122,7 +124,7 @@ const category = videoData.category;
             marginBottom: 25,
           }}
         >
-          {aiContent.title}
+        INTELIGENCIA ARTIFICIAL PARA CREAR VIDEOS
         </div>
 
         <div
