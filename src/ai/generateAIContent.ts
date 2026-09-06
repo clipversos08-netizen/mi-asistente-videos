@@ -1,6 +1,7 @@
 import { openai } from "./openai";
 import { AIContent } from "../aiContent";
-
+import { writeFile } from "node:fs/promises";
+import { topic } from "./topic";
 export async function generateAIContent(
   topic: string
 ): Promise<AIContent> {
@@ -14,5 +15,20 @@ topic, title, subtitle, description, hook, script, callToAction.
 El contenido debe estar en español.`,
   });
 
-  return JSON.parse(response.output_text) as AIContent;
+  const content = JSON.parse(response.output_text) as AIContent;
+
+await writeFile(
+  "src/ai/content.json",
+  JSON.stringify(content, null, 2),
+  "utf-8"
+);
+
+return content;
 }
+generateAIContent(topic)
+  .then((content) => {
+    console.log(JSON.stringify(content, null, 2));
+  })
+  .catch((error) => {
+    console.error(error);
+  })

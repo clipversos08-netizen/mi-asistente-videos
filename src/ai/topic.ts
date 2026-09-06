@@ -1,1 +1,1 @@
-export const topic = "5 herramientas de inteligencia artificial";
+export const topic = "Cómo ahorrar dinero en el supermercado"

@@ -124,7 +124,7 @@ const category = videoData.category;
             marginBottom: 25,
           }}
         >
-        INTELIGENCIA ARTIFICIAL PARA CREAR VIDEOS
+        {aiContent.title}
         </div>
 
         <div
